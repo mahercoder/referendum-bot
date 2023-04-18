@@ -1,4 +1,4 @@
 module.exports = [
     require('./home'),
-    ...require('./game_control'),
+    ...require('./partner_channel'),
 ]

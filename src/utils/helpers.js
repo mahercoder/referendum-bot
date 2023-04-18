@@ -36,6 +36,10 @@ function getTempPath(){
     return Configuration.tempPath;
 }
 
+function getDistricts(){
+    return Constants.districts;
+}
+
 function getChannels(){
     return Constants.channel_ids;
 }
@@ -56,8 +60,54 @@ function addDistrictChannel(district_id, chat_id){
     fs.writeFileSync(path.join(__dirname, '/constants.json'), JSON.stringify(Constants));
 }
 
+function removeDistrictChannel(district_id, index){
+    Constants.districts[district_id].channel_ids.splice(index, 1);
+    fs.writeFileSync(path.join(__dirname, '/constants.json'), JSON.stringify(Constants));
+}
+
 function getDistrictChannels(district_id){
     return Constants.districts[district_id].channel_ids;
+}
+
+// Hamkor kanalda bot mavjudligi va adminligini tekshirish
+async function isBotAdminHere(ctx, chat_id){
+    try{
+        const admins = await ctx.telegram.getChatAdministrators(chat_id)
+        const bot_username = ctx.botInfo.username
+    
+         for(let i=0; i < admins.length; i++){
+              if(admins[i].user.username == bot_username){
+                 return true
+              }
+         }
+    } catch(err){
+         if(err){
+              return false
+         }
+    }
+
+    return false
+}
+
+// Hamkor kanallarning barchasiga obuna bo'lganligini tekshirish
+async function isSubscribed(ctx, partnerChannels=[]){
+    let result = true
+   
+    for(let i=0; i < partnerChannels.length; i++){
+         try {
+              const user = await ctx.telegram.getChatMember(partnerChannels[i], ctx.from.id)
+
+              if(user.status == 'left' || user.status == 'kicked' || user.status == 'restricted'){
+                   result = false;
+              }
+         } catch(err) {
+              if(err.code == 400){
+                   result = false
+              }
+         }
+    }
+
+    return result
 }
 
 /**
@@ -112,9 +162,15 @@ module.exports = {
     makeImage,
 
     getTempPath,
+    getDistricts,
+    
     getChannels,
     addChannel,
     removeChannel,
+
+    getDistrictChannels,
     addDistrictChannel,
-    getDistrictChannels
+    removeDistrictChannel,
+
+    isBotAdminHere, isSubscribed
 }

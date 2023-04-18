@@ -3,7 +3,6 @@ const { BaseScene } = Scenes;
 const { helpers } = require('../../../utils');
 
 const callback_data = {
-    game_control: 'admin.home.game_control',
     partner_channel: 'admin.home.partner_channel',
     publish_ad: 'admin.home.publish_ad',
     stats: 'admin.home.stats',
@@ -12,10 +11,7 @@ const callback_data = {
 
 function makeButtons(ctx){
     return [
-        [
-            { text: ctx.i18n.t(callback_data.game_control), callback_data: callback_data.game_control }, 
-            { text: ctx.i18n.t(callback_data.partner_channel), callback_data: callback_data.partner_channel }
-        ],
+        [{ text: ctx.i18n.t(callback_data.partner_channel), callback_data: callback_data.partner_channel }],
         [
             { text: ctx.i18n.t(callback_data.publish_ad), callback_data: callback_data.publish_ad }, 
             { text: ctx.i18n.t(callback_data.stats), callback_data: callback_data.stats }
@@ -35,13 +31,9 @@ scene.enter( async ctx => {
 scene.action(/.+/, async ctx => {
     const action = ctx.callbackQuery.data
     switch(action){
-        case callback_data.game_control: {
-            ctx.deleteMessage().catch( err => {});
-            ctx.scene.enter('admin-home-game_control');
-            break;
-        }
         case callback_data.partner_channel: {
-            // ctx.reply(ctx.i18n.t(callback_data.uzbek_movies));
+            ctx.deleteMessage().catch( err => {});
+            ctx.scene.enter('admin-home-partner_channel');
             break;
         }
         case callback_data.publish_ad: {
