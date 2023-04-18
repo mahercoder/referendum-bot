@@ -44,11 +44,11 @@ admin:
       back: ⬅️ Orqaga
 
     district_channels:
-      caption: "Viloyatni tanlab unga kanal qo'shishingiz mumkin:"
+      caption: "Hududni tanlab unga kanal qo'shishingiz mumkin:"
       back: ⬅️ Orqaga
 
     selected_district:
-      caption: "${districtName} viloyati bo'yicha kanallarni boshqarish.\n\n<i>Hamkor kanal qo'shish uchun undagi ixtiyoriy postni 'forward' qilib shu yerga jo'nating!\nEslatma! Hamkorga aylanish uchun bot kanalda adminlik huquqlariga ega bo'lishi kerak!</i>"
+      caption: "${districtName} hududi bo'yicha kanallarni boshqarish.\n\n<i>Hamkor kanal qo'shish uchun undagi ixtiyoriy postni 'forward' qilib shu yerga jo'nating!\nEslatma! Hamkorga aylanish uchun bot kanalda adminlik huquqlariga ega bo'lishi kerak!</i>"
       accepted: "✅ Yangi hamkor kanal qo'shildi!"
       rejected: "🙅‍♂️ Bekor qilindi! Bot kanalda mavjud emas!"
       rejected_contract: "🙅‍♂️ Kanaldan hamkorlik olib tashlandi: "

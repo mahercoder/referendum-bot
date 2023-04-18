@@ -97,7 +97,7 @@ async function isSubscribed(ctx, partnerChannels=[]){
          try {
               const user = await ctx.telegram.getChatMember(partnerChannels[i], ctx.from.id)
 
-              if(user.status == 'left' || user.status == 'kicked' || user.status == 'restricted'){
+              if(!user || user.status == 'left' || user.status == 'kicked' || user.status == 'restricted'){
                    result = false;
               }
          } catch(err) {

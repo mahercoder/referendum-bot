@@ -1,1 +1,20 @@
-{"districts":[{"id":0,"name":"Andijon vil","channel_ids":[]},{"id":1,"name":"Buxoro vil","channel_ids":[]},{"id":2,"name":"Jizzax vil","channel_ids":[]},{"id":3,"name":"Qashqadaryo vil","channel_ids":[]},{"id":4,"name":"Navoiy vil","channel_ids":[]},{"id":5,"name":"Namangan vil","channel_ids":[]},{"id":6,"name":"Samarqand vil","channel_ids":[-1001820035828]},{"id":7,"name":"Surxondaryo vil","channel_ids":[]},{"id":8,"name":"Sirdaryo vil","channel_ids":[]},{"id":9,"name":"Toshkent vil","channel_ids":[]},{"id":10,"name":"Farg'ona vil","channel_ids":[]},{"id":11,"name":"Xorazm vil","channel_ids":[]},{"id":12,"name":"Toshkent sh","channel_ids":[]},{"id":13,"name":"Qoraqalpog'iston Res","channel_ids":[]}],"channel_ids":[],"tempPath":"C:\\Users\\Mohirbek\\Desktop\\referendum-bot\\src\\temp"}
+{
+  "districts": [
+    { "id": 0, "name": "Andijon", "channel_ids": [] },
+    { "id": 1, "name": "Buxoro", "channel_ids": [] },
+    { "id": 2, "name": "Jizzax", "channel_ids": [] },
+    { "id": 3, "name": "Qashqadaryo", "channel_ids": [] },
+    { "id": 4, "name": "Navoiy", "channel_ids": [] },
+    { "id": 5, "name": "Namangan", "channel_ids": [] },
+    { "id": 6, "name": "Samarqand", "channel_ids": [-1001820035828] },
+    { "id": 7, "name": "Surxondaryo", "channel_ids": [] },
+    { "id": 8, "name": "Sirdaryo", "channel_ids": [] },
+    { "id": 9, "name": "Toshkent", "channel_ids": [] },
+    { "id": 10, "name": "Farg'ona", "channel_ids": [] },
+    { "id": 11, "name": "Xorazm", "channel_ids": [] },
+    { "id": 12, "name": "Toshkent", "channel_ids": [] },
+    { "id": 13, "name": "Qoraqalpog'iston", "channel_ids": [] }
+  ],
+  "channel_ids": [],
+  "tempPath": "C:\\Users\\Mohirbek\\Desktop\\referendum-bot\\src\\temp"
+}
