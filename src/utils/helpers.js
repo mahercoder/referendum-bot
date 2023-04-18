@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 const Constants = require('./constants.json');
+const config = require('./config');
 
 const TEMP_PATH = path.join(__dirname, '..', '/temp')
 
@@ -110,6 +111,34 @@ async function isSubscribed(ctx, partnerChannels=[]){
     return result
 }
 
+// userId owner`ga tegishli bo'lsa true, aks holda false
+function isOwner(userId){
+    let result = false
+    const owners = config.owners
+    
+    for(let i=0; i < owners.length; i++){
+        if(userId == owners[i]){
+            result = true
+        }
+    }
+
+    return result
+}
+
+// userId egasi bot'ni boshqara oladigan adminmi?
+function isAdmin(userId){
+    let result = false
+    const admins = config.admins
+    
+    for(let i=0; i < admins.length; i++){
+        if(userId == admins[i]){
+            result = true
+        }
+    }
+
+    return result
+}
+
 /**
  * ButtonObject -> { text: 'some text', callback_data: 'some_text' }
  * @param {Array<ButtonObject>} buttons
@@ -172,5 +201,7 @@ module.exports = {
     addDistrictChannel,
     removeDistrictChannel,
 
-    isBotAdminHere, isSubscribed
+    isBotAdminHere, isSubscribed,
+
+    isAdmin, isOwner
 }

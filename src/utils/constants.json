@@ -1,4 +1,5 @@
 {
+  "admins": [],
   "districts": [
     { "id": 0, "name": "Andijon", "channel_ids": [] },
     { "id": 1, "name": "Buxoro", "channel_ids": [] },
