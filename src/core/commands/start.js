@@ -9,10 +9,13 @@ module.exports = {
         await User.findOrCreate({
             where: {
                 id: ctx.from.id, 
-                fullname: ctx.from.first_name,
+                first_name: ctx.from.first_name,
                 username: ctx.from.username
             }
-        }).catch(err => logger.error(err));
+        }).catch(err => {
+            logger.error(err);
+            console.log(err);
+        });
 
         ctx.scene.enter('user-home');
     }

@@ -8,6 +8,6 @@ module.exports = async bot => {
     bot.use(session);
     bot.use(i18n);
     bot.use(stage);
-    bot.use(isAuth);
+    // bot.use(isAuth);
     bot.catch(report);
 }

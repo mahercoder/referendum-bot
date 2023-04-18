@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         },
         district_number: {
-            type: DataTypes.STRING
+            type: DataTypes.INTEGER
         },
         language_code: {
             type: DataTypes.STRING,
