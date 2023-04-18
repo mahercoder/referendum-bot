@@ -1,0 +1,57 @@
+start:
+  caption: "Botga xush kelibsiz, ${name}"
+
+  text: Masalanda endi!
+
+user:
+
+  signup:
+    caption: "Salom, botga xush kelibsiz! Iltimos, o'z viloyatingizni tanlang:"
+
+  subscription:
+    caption: "Botdan foydalanish uchun quyidagi kanallarga a'zo bo'lishingiz keyin esa [✅ A'zo bo'ldim] tugmasini bosishingiz kerak:"
+    thank: "Rahmat! Botdan bemalol foydalanishingiz mumkin!"
+    subscribed: ✅ A'zo bo'ldim
+
+  home:
+    caption: "Suratingiz bilan referendumda ishtirok etish uchun hoziroq rasmingizni yuborishingiz mumkin:"
+
+  select_shape:
+    caption: "Menyudan yaratiladigan fotosurat shaklini tanlang:"
+    shape_1: "1"
+    shape_2: "2"
+    shape_3: "3"
+    shape_4: "4"
+    ready: "Rasmingiz tayyor! Yana rasm yubormoqchi bo'lsangiz /start buyrug'ini bering."
+
+admin:
+  home:
+    caption: 🏠 Admin panel
+    partner_channel: 📢 Hamkor kanal
+    publish_ad: 📣 E'lon berish
+    stats: 📊 Statistika
+    exit: 🚪 Chiqish
+
+  partner_channel:
+    caption: "Hamkor kanal qo'shish uchun undagi ixtiyoriy postni 'forward' qilib shu yerga jo'nating!\n\n<i>Eslatma! Hamkorga aylanish uchun bot kanalda adminlik huquqlariga ega bo'lishi kerak!</i>"
+    buttons:
+      district_channels: "➕ Viloyatlar bo'yicha"
+      del_channel: ❌
+      back: ⬅️ Orqaga
+
+    district_channels:
+      caption: "Viloyatni tanlab unga kanal qo'shishingiz mumkin:"
+      back: ⬅️ Orqaga
+
+    selected_district:
+      caption: "${districtName} viloyati bo'yicha kanallarni boshqarish.\n\n<i>Hamkor kanal qo'shish uchun undagi ixtiyoriy postni 'forward' qilib shu yerga jo'nating!\nEslatma! Hamkorga aylanish uchun bot kanalda adminlik huquqlariga ega bo'lishi kerak!</i>"
+      del_channel: ❌
+      back: ⬅️ Orqaga
+
+  publish_ad:
+    caption: "E'lon postini quyida yuborishingiz bilan e'lonni barchaga tarqatish jarayoni boshlanadi:"
+    back: ⬅️ Orqaga
+
+  stats:
+    caption: "Botdagi jami foydalanuvchilar soni: ${membersCount}"
+    back: ⬅️ Orqaga
