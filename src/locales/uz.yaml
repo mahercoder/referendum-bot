@@ -6,7 +6,7 @@ start:
 user:
 
   signup:
-    caption: "Salom, botga xush kelibsiz! Iltimos, o'z viloyatingizni tanlang:"
+    caption: "<b>Assalomu alaykum, botga xush kelibsiz! Iltimos, o'z viloyatingizni tanlang:</b>"
 
   subscription:
     caption: "Botdan foydalanish uchun quyidagi kanallarga a'zo bo'lishingiz keyin esa [✅ A'zo bo'ldim] tugmasini bosishingiz kerak:"
@@ -14,15 +14,15 @@ user:
     subscribed: ✅ A'zo bo'ldim
 
   home:
-    caption: "Suratingiz bilan referendumda ishtirok etish uchun hoziroq rasmingizni yuborishingiz mumkin:"
+    caption: "<b>Referendum uchun rasm yarating va do'stingizga ulashing</b>\n\nSuratingiz bilan referendumda ishtirok etish uchun hoziroq rasmingizni shu yerga yuboring"
 
   select_shape:
-    caption: "Menyudan yaratiladigan fotosurat shaklini tanlang:"
+    caption: "<b>Menyudan yaratiladigan fotosurat shaklini tanlang.</b>\n\nShakl 1️⃣ Shakl 2️⃣\nShakl 3️⃣ Shakl 4️⃣"
     shape_1: "1"
     shape_2: "2"
     shape_3: "3"
     shape_4: "4"
-    ready: "Rasmingiz tayyor! Yana rasm yubormoqchi bo'lsangiz /start buyrug'ini bering."
+    ready: "Rasmingiz tayyor! Yana rasm yuborishingiz mumkin."
 
 admin:
   home:
@@ -31,6 +31,7 @@ admin:
     publish_ad: 📣 E'lon berish
     stats: 📊 Statistika
     exit: 🚪 Chiqish
+    user_count: "👤 Umumiy foydalanuvchilar: ${userCount}"
 
   partner_channel:
     caption: "Hamkor kanal qo'shish uchun undagi ixtiyoriy postni 'forward' qilib shu yerga jo'nating!\n\n<i>Eslatma! Hamkorga aylanish uchun bot kanalda adminlik huquqlariga ega bo'lishi kerak!</i>"
@@ -48,7 +49,7 @@ admin:
       back: ⬅️ Orqaga
 
     selected_district:
-      caption: "${districtName} hududi bo'yicha kanallarni boshqarish.\n\n<i>Hamkor kanal qo'shish uchun undagi ixtiyoriy postni 'forward' qilib shu yerga jo'nating!\nEslatma! Hamkorga aylanish uchun bot kanalda adminlik huquqlariga ega bo'lishi kerak!</i>"
+      caption: "${districtName}. bo'yicha kanallarni boshqarish.\n\n<i>Hamkor kanal qo'shish uchun undagi ixtiyoriy postni 'forward' qilib shu yerga jo'nating!\nEslatma! Hamkorga aylanish uchun bot kanalda adminlik huquqlariga ega bo'lishi kerak!</i>"
       accepted: "✅ Yangi hamkor kanal qo'shildi!"
       rejected: "🙅‍♂️ Bekor qilindi! Bot kanalda mavjud emas!"
       rejected_contract: "🙅‍♂️ Kanaldan hamkorlik olib tashlandi: "
@@ -57,8 +58,16 @@ admin:
       back: ⬅️ Orqaga
 
   publish_ad:
-    caption: "E'lon postini quyida yuborishingiz bilan e'lonni barchaga tarqatish jarayoni boshlanadi:"
-    back: ⬅️ Orqaga
+    caption: "<i>Reklama posti bo'yicha cheklovlar mavjud:\n * Postda faqat bitta media(rasm, video yoki fayl)ga ruxsat beriladi!\n * Post ostida tugma bo'lishi mumkin emas!</i>\n\nQuyida reklama postini kiriting:"
+    agreement: "Reklama posti foydalanuvchilarga yuqoridagi kabi ko'rinadi. Yuborish jarayonini boshlaysizmi?"
+    started: "Yuborish jarayoni boshlandi..."
+    ended: "✅ Jarayon yakunlandi! Post foydalanuvchilarga muvaffaqiyatli yetkazildi!"
+    rejected: "🙅‍♂️ Bekor qilindi! Reklama posti hech kimga yuborilmadi! Iltimos, postni tekshirib qayta yuboring!"
+    yes: "✅ Boshlash!"
+    no: "🙅‍♂️ Bekor qilish"
+    loading: "Jo'natilmoqda..."
+    report: "<b>📊 Reklama statistikasi</b>\n\n<b>👤 Umumiy foydalanuvchilar: </b>${userCount}\n<b>❤️‍🔥 Reklama qabul qilganlar: </b>${receiverCount}\n<b>⚠️ Stop bosganlar: </b>${stopperCount}"
+    back: "⬅️ Orqaga"
 
   stats:
     caption: "Botdagi jami foydalanuvchilar soni: ${membersCount}"

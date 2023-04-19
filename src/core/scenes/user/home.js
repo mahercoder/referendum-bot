@@ -29,7 +29,7 @@ const scene = new BaseScene('user-home');
 
 scene.enter( async ctx => {
     const caption = ctx.i18n.t('user.home.caption');
-    ctx.reply(caption);
+    ctx.replyWithHTML(caption);
 });
 
 scene.on('photo', async ctx => {
@@ -55,7 +55,8 @@ scene.on('photo', async ctx => {
                 const photoPath = path.join(__dirname, '..', '..', '..', '/assets/temp.jpg');
                 ctx.replyWithPhoto({ source: photoPath }, {
                     caption, 
-                    reply_markup: keyboard 
+                    reply_markup: keyboard ,
+                    parse_mode: 'HTML'
                 });
             });
         })
@@ -81,7 +82,7 @@ scene.action(/.+/, async ctx => {
 
                 await ctx.reply(caption);
 
-                await ctx.scene.leave();
+                // await ctx.scene.leave();
             });
             break;
         }
@@ -99,7 +100,7 @@ scene.action(/.+/, async ctx => {
 
                 await ctx.reply(caption);
 
-                await ctx.scene.leave();
+                // await ctx.scene.leave();
             });
             break;
         }
@@ -117,7 +118,7 @@ scene.action(/.+/, async ctx => {
 
                 await ctx.reply(caption);
 
-                await ctx.scene.leave();
+                // await ctx.scene.leave();
             });
             break;
         }
@@ -135,7 +136,7 @@ scene.action(/.+/, async ctx => {
 
                 await ctx.reply(caption);
 
-                await ctx.scene.leave();
+                // await ctx.scene.leave();
             });
             break;
         }

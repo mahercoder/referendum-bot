@@ -1,6 +1,8 @@
 const { Scenes } = require('telegraf');
 const { BaseScene } = Scenes;
 const { helpers } = require('../../../utils');
+const { Models } = require('../../../models');
+const { User } = Models;
 
 const callback_data = {
     partner_channel: 'admin.home.partner_channel',
@@ -25,7 +27,7 @@ const scene = new BaseScene('admin-home');
 scene.enter( async ctx => {
     const caption = ctx.i18n.t('admin.home.caption')
     const keyboard = helpers.makeInlineKeyboard(makeButtons(ctx));
-    ctx.reply(caption, { reply_markup: keyboard })
+    ctx.replyWithHTML(caption, { reply_markup: keyboard })
 });
 
 scene.action(/.+/, async ctx => {
@@ -37,11 +39,19 @@ scene.action(/.+/, async ctx => {
             break;
         }
         case callback_data.publish_ad: {
-            // ctx.reply(ctx.i18n.t(callback_data.translated_movies));
+            ctx.deleteMessage().catch( err => {});
+            ctx.scene.enter('admin-home-publish_ad');
             break;
         }
         case callback_data.stats: {
-            // ctx.reply(ctx.i18n.t(callback_data.serials));
+            const userCount = await User.count();
+            const caption = ctx.i18n.t('admin.home.user_count', { userCount });
+
+            ctx.deleteMessage().catch( err => {});
+            
+            await ctx.replyWithHTML(caption);
+            await ctx.scene.reenter();
+
             break;
         }
         case callback_data.exit: {
