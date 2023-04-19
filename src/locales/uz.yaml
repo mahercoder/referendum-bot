@@ -17,11 +17,11 @@ user:
     caption: "<b>Referendum uchun rasm yarating va do'stingizga ulashing</b>\n\nSuratingiz bilan referendumda ishtirok etish uchun hoziroq rasmingizni shu yerga yuboring"
 
   select_shape:
-    caption: "<b>Menyudan yaratiladigan fotosurat shaklini tanlang.</b>\n\nShakl 1️⃣ Shakl 2️⃣\nShakl 3️⃣ Shakl 4️⃣"
-    shape_1: "1"
-    shape_2: "2"
-    shape_3: "3"
-    shape_4: "4"
+    caption: "<b>Menyudan yaratiladigan fotosurat shaklini tanlang.</b>"
+    shape_1: "Shakl 1️⃣"
+    shape_2: "Shakl 2️⃣"
+    shape_3: "Shakl 3️⃣"
+    shape_4: "Shakl 4️⃣"
     ready: "Rasmingiz tayyor! Yana rasm yuborishingiz mumkin."
 
 admin:
